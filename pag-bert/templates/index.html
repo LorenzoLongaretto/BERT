@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Preguntas y Respuestas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Preguntas y Respuestas</h1>
+      <form method="POST" action="/">
+        <label for="context">Contexto:</label><br>
+        <textarea id="context" name="context" rows="5" cols="50"></textarea><br>
+        <label for="question">Pregunta:</label><br>
+        <textarea id="question" name="question" rows="2" cols="50"></textarea><br>
+        <input type="submit" value="Enviar">
+      </form>
+      {% if answer %}
+      <div class="answer">
+        <h2>Respuesta:</h2>
+        <p>{{ answer }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
+
