@@ -44,7 +44,7 @@ def index():
         answer = salida({'context': context, 'question': question})['answer']
         #print(answer)
         # devolver la respuesta a la plantilla HTML
-        return render_template('index.html', answer=answer, context=context)
+        return render_template('index.html', answer=answer, context=context,question=question)
     else:
         # mostrar la plantilla HTML sin respuesta
         return render_template('index.html')
